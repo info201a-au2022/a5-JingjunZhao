@@ -17,7 +17,7 @@ names(owid_CO2)[1]<-paste("region")
 map_CO2<-left_join(owid_CO2, world_map, by = "region")
 
 server <- function(input, output) {
-observeEvent(map_share_2019, {
+observeEvent(map_CO2, {
         updateSliderInput(
             inputId = "year",
             min = min(map_CO2$year),
