@@ -12,7 +12,6 @@ library(maps)
 library(plotly)
 library(rsconnect)
 library(htmltools)
-rsconnect::configureApp("A5ShinyApp", size="xlarge")
 library(shinythemes)
 ?owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
 
