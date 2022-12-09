@@ -9,6 +9,8 @@
 library(dplyr)
 library(maps)
 library(shiny)
+library(rsconnect)
+library(htmltools)
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5server.R")
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5ui.R")
 shinyApp(ui = ui, server = server)

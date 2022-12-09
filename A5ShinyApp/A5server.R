@@ -7,6 +7,8 @@
 #    http://shiny.rstudio.com/
 #
 library(maps)
+library(rsconnect)
+library(htmltools)
 library(ggplot2)
 library(shiny)
 library(plotly)
