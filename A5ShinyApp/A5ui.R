@@ -24,10 +24,9 @@ shinyUI(fluidPage(
                         value = max(map_CO2$year)
         )),
 
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotlyOutput(outputId = 'map')
-            
-        )
+    mainPanel(
+        plotlyOutput(outputId = 'map'),
+        p("This Chart shows "))
 ))
+)
 
