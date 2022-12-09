@@ -22,11 +22,11 @@ shinyUI(fluidPage(
                         min = min(map_CO2$year),
                         max = max(map_CO2$year),
                         value = max(map_CO2$year)
-        )),
+        ),
 
-    mainPanel(
+  mainPanel(
         plotlyOutput(outputId = 'map'),
-        p("This Chart shows "))
+        p("This Chart shows the change of CO2 emission in different years in each country"))
 ))
 )
 

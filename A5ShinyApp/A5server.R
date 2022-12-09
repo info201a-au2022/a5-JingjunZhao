@@ -17,6 +17,15 @@ names(owid_CO2)[1]<-paste("region")
 map_CO2<-left_join(owid_CO2, world_map, by = "region")
 
 server <- function(input, output) {
+observeEvent(map_share_2019, {
+        updateSliderInput(
+            inputId = "year",
+            min = max(map_CO2$year),
+            max = max(map_CO2$year),
+            value = max(map_CO2$year)
+        )
+    })
+
 filter_year <- reactive({
     map_CO2 %>%
         filter( year = input$year)
