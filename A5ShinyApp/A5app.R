@@ -7,6 +7,7 @@
 #    http://shiny.rstudio.com/
 #
 library(dplyr)
+library(maps)
 library(shiny)
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5server.R")
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5ui.R")
