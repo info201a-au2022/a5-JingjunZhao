@@ -8,27 +8,26 @@
 #
 
 library(shiny)
-
+source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5server.R")
 
 shinyUI(fluidPage(
 
    
-    titlePanel("Old Faithful Geyser Data"),
+    titlePanel("Change over CO2 Emission in Years among Countries"),
 
 
     sidebarLayout(
-        sidebarPanel(
             sliderInput("year",
                         "Year",
                         min = min(map_CO2$year),
                         max = max(map_CO2$year),
-                        value = 30)
-        ),
+                        value = max(map_CO2$year)
+        )),
 
         # Show a plot of the generated distribution
         mainPanel(
-            titlePanel("Health Spending as a Share of Government Expenditure"),
-            plotlyOutput(outputId = ''),
+            plotlyOutput(outputId = 'map')
+            
         )
-    )
 ))
+
