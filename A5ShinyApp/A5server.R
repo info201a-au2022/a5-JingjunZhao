@@ -8,8 +8,7 @@
 #
 
 owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
-library(shiny)
-library(plotly)
+
 
 world_map <- map_data("world")
 owid_CO2<-select(owid,"country","co2","year")
