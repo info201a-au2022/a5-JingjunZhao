@@ -8,6 +8,7 @@
 #
 library(maps)
 library(ggplot2)
+library(shiny)
 owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
 
 
