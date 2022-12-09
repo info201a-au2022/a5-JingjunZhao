@@ -8,7 +8,8 @@
 #
 
 library(shiny)
-source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/A5server.R")
+owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
+
 
 shinyUI(fluidPage(
 
