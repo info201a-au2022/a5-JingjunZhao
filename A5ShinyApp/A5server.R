@@ -20,7 +20,7 @@ server <- function(input, output) {
 observeEvent(map_share_2019, {
         updateSliderInput(
             inputId = "year",
-            min = max(map_CO2$year),
+            min = min(map_CO2$year),
             max = max(map_CO2$year),
             value = max(map_CO2$year)
         )
