@@ -28,7 +28,7 @@ observeEvent(map_share_2019, {
 
 filter_year <- reactive({
     map_CO2 %>%
-        filter( year = input$year)
+        filter( year == input$year)
 })
 
 output$map<-renderPlotly({ggplotly(ggplot(filter_year(), aes(long, lat, group = group))+
