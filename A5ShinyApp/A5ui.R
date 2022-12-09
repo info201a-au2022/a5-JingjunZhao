@@ -11,7 +11,7 @@ library(shiny)
 owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
 
 
-shinyUI(fluidPage(
+ui <- shinyUI(fluidPage(
 
    
     titlePanel("Change over CO2 Emission in Years among Countries"),
