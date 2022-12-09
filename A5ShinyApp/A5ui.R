@@ -9,25 +9,26 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+
 shinyUI(fluidPage(
 
-    # Application title
+   
     titlePanel("Old Faithful Geyser Data"),
 
-    # Sidebar with a slider input for number of bins
+
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
+            sliderInput("year",
+                        "Year",
+                        min = min(map_CO2$year),
+                        max = max(map_CO2$year),
                         value = 30)
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("distPlot")
+            titlePanel("Health Spending as a Share of Government Expenditure"),
+            plotlyOutput(outputId = ''),
         )
     )
 ))

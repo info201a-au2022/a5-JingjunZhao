@@ -7,22 +7,24 @@
 #    http://shiny.rstudio.com/
 #
 
+owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
 library(shiny)
+library(plotly)
 
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+world_map <- map_data("world")
+owid_CO2<-select(owid,"country","co2","year")
+names(owid_CO2)[1]<-paste("region")
+map_CO2<-left_join(owid_CO2, world_map, by = "region")
 
-    output$distPlot <- renderPlot({
-
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-
-    })
-
+server <- function(input, output) {
+filter_year <- reactive({
+    map_CO2 %>%
+        filter( year = input$year)
 })
+
+output$map<-renderPlotly({ggplotly(ggplot(filter_year(), aes(long, lat, group = group))+
+                                       geom_polygon(aes(fill = co2))+ 
+                                       scale_fill_gradient(low = "yellow", high = "red", na.value = NA))
+    
+})
+}
