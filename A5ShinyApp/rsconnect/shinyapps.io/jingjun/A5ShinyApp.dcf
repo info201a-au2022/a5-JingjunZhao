@@ -1,0 +1,13 @@
+name: A5ShinyApp
+title: A5ShinyApp
+username:
+account: jingjun
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7859698
+bundleId: 6617501
+url: https://jingjun.shinyapps.io/A5ShinyApp/
+when: 1670619292.5679
+lastSyncTime: 1670619292.56791
+asMultiple: FALSE
+asStatic: FALSE
