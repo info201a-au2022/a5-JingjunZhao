@@ -37,7 +37,8 @@ source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5
                         "Year",
                         min = min(map_CO2$year),
                         max = max(map_CO2$year),
-                        value = max(map_CO2$year)
+                        value = max(map_CO2$year),
+                        step = 1
         ),
   mainPanel(
         plotlyOutput(outputId = 'map'),
