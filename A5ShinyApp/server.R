@@ -13,7 +13,7 @@ library(ggplot2)
 library(shiny)
 library(plotly)
 library(dplyr)
-
+source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/data.R")
 
 server <- function(input, output) {
 observeEvent(map_CO2, {

@@ -13,8 +13,7 @@ library(plotly)
 library(rsconnect)
 library(htmltools)
 library(shinythemes)
-
-
+source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/data.R")
 
   intro_page <- tabPanel(
     "Introduction",
