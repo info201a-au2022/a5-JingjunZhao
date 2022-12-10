@@ -6,7 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
-library(maps)
+require(maps)
 library(rsconnect)
 library(htmltools)
 library(ggplot2)

@@ -8,7 +8,7 @@
 #
 
 library(shiny)
-library(maps)
+require(maps)
 library(plotly)
 library(rsconnect)
 library(htmltools)
