@@ -1,4 +1,4 @@
-library(maps)
+require(maps)
 library(dplyr)
 library(ggplot2)
 owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
