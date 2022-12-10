@@ -6,9 +6,14 @@
 #
 #    http://shiny.rstudio.com/
 #
+library(dplyr)
+library(maps)
 library(shiny)
 library(rsconnect)
 library(htmltools)
+library(ggplot2)
+library(plotly)
+library(shinythemes)
 
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/server.R")
 source("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/A5ShinyApp/ui.R")

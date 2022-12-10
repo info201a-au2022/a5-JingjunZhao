@@ -8,6 +8,8 @@
 #
 
 library(shiny)
+library(maps)
+library(plotly)
 library(rsconnect)
 library(htmltools)
 library(shinythemes)
