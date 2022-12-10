@@ -5,10 +5,10 @@ account: jingjun
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7860989
-bundleId: 6618833
+bundleId: 6618866
 url: https://jingjun.shinyapps.io/A5ShinyApp2/
-when: 1670648402.99992
-lastSyncTime: 1670648402.99993
+when: 1670648986.2918
+lastSyncTime: 1670648986.29181
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .RData|data.R|server.R|ui.R
