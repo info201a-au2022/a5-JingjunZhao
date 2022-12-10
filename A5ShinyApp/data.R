@@ -1,9 +1,10 @@
 library(maps)
 library(dplyr)
-
+library(ggplot2)
 owid<-read.csv("https://raw.githubusercontent.com/info201a-au2022/a5-JingjunZhao/main/owid-co2-data.csv")
 
 world_map <- map_data("world")
 owid_CO2<-select(owid,"country","co2","year")
 names(owid_CO2)[1]<-paste("region")
 map_CO2<-left_join(owid_CO2, world_map, by = "region")
+map_CO2<-map_CO2%>%filter(year>2016)
